@@ -34,6 +34,7 @@ const config = {
       ({
         docs: {
           routeBasePath: "/",
+          showLastUpdateTime: true,
         },
         blog: {
           showReadingTime: true,
