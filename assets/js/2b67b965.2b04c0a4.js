@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkmy_website=self.webpackChunkmy_website||[]).push([[364],{4452:e=>{e.exports=JSON.parse('{"title":"Database","description":"Learn database in a easy way.","slug":"/category/database","permalink":"/category/database","navigation":{"next":{"title":"Vertical Scaling Postgres with Zero-downtime","permalink":"/"}}}')}}]);
