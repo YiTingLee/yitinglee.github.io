@@ -1,6 +1,7 @@
 {
   "label": "Database",
-  "position": 1,
+  "position": 5,
+  "collapsed": false,
   "link": {
     "type": "generated-index",
     "description": "Learn database in a easy way."

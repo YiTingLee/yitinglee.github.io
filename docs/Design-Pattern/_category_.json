@@ -1,6 +1,7 @@
 {
   "label": "Design Pattern",
-  "position": 2,
+  "position": 15,
+  "collapsed": false,
   "link": {
     "type": "generated-index",
     "description": "Learn Design Pattern with Typescript in a easy way."
