@@ -1,0 +1,9 @@
+{
+  "label": "Kubernetes",
+  "position": 20,
+  "collapsed": false,
+  "link": {
+    "type": "generated-index",
+    "description": "Learn kubernetes in a easy way."
+  }
+}
