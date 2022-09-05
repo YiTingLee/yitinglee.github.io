@@ -26,7 +26,7 @@ Kubernetes 又稱 K8S (因為 K 與 S 之間有 8 個字母)，是 Google 於 20
 
 :::tip My tip
 
-如果還不懂什麼是 Pod 的話，可以先把 Pod 想像成 Container 或是 Applicatoin
+如果還不懂什麼是 Pod 的話，可以先把 Pod 想像成 Container 或是 Application
 
 :::
 
