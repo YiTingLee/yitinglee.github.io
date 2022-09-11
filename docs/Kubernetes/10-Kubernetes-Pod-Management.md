@@ -91,7 +91,7 @@ spec:
 
 不知道大家有沒有想過這個問題，Kubernetes 為什麼不使用 Container 做為 Application 的最小單位，而是用 Pod 在對 Container 進行一層封裝。在 Production 環境中我們同時都會運行許多的 Worker Node，常常會有關係很緊密的 Container 出現，而這些 Container 都會需要跑在同一台 Worker Node 上，如果沒有 Pod 的情況下，所以 Kubernetes 就必須要針對這些情況進行特別的調度。
 
-舉例來說我們目前有兩個關係緊密的 Container AB 需要被放到 NodeA 內執行。這兩個 Container 各需要 0.5 CPU (總共 1 CPU)的硬體資源，而 NodeA 只剩下 0.5 CPU 可用。
+舉例來說我們目前有兩個關係緊密的 ContainerA 與 ContainerB 需要被放到 NodeA 內執行。這兩個 Container 各需要 0.5 CPU (總共 1 CPU)的硬體資源，而 NodeA 只剩下 0.5 CPU 可用。
 
 - 首先我們會把 ContainerB 設定成 ContainerA 的 Dependency，讓調度者可以知道 Container AB 需要跑在同一個 Node 上。
 - ContainerA 會被調度到 NodeA 上去運行
@@ -207,7 +207,7 @@ Deployment 主要提供兩種常見的部署策略。
 
 #### Rolling Update Strategy (Zero-downtime)
 
-Rolling Update 是一個 Zero-downtime 的策略，策略上就是終止部分舊版本的 Pod 並同時啟動新的 Pod，並將流量慢慢切到新版本的 Pod 上，重複這個行為直到 rollout 完成。我們用兩個 Pod12 要換到兩個新版本的 Pod34 來舉例。
+Rolling Update 是一個 Zero-downtime 的策略，策略上就是終止部分舊版本的 Pod 並同時啟動新的 Pod，並將流量慢慢切到新版本的 Pod 上，重複這個行為直到 rollout 完成。我們用兩個 Pod1 與 Pod2 要換到兩個新版本的 Pod3 與 Pod4 來舉例。
 
 - 圖 1: Pod 1 與 Pod2 正常的運行在 Node 上
 - 圖 2: 停止 Pod2 並同時啟動 Pod3 (流量只有打到 Pod1)
@@ -252,7 +252,7 @@ spec:
 
 #### Recreate
 
-Recreate 是一個會有短暫 downtime 的策略，策略上就是把目前所有舊版本的 Pod 都關掉，並啟動新版本的 Pod，但啟動新版本的時間就是該 rollout 的 downtime 時間。Recreate 的優點就是速度很快，不用像 RollingUpdate 這樣慢慢切換。
+Recreate 是一個會有短暫 downtime 的策略，策略上就是把目前所有舊版本的 Pod 都關掉，並啟動新版本的 Pod，但啟動新版本 Pod 的時間就是該 rollout 的 downtime 時間。Recreate 的優點就是速度很快，不用像 RollingUpdate 這樣慢慢切換。
 
 ![Recreate](/images/pod-management/recreate.png)
 
