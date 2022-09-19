@@ -18,7 +18,6 @@ socialImage: ""
 - Label 基本介紹
 - Annotation 基本介紹
 - Service 基本介紹
-- Ingress 基本介紹
 
 ## Label 基本介紹
 
