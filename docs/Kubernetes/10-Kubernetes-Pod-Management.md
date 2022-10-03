@@ -232,7 +232,7 @@ spec:
   selector:
     matchLabels:
       app: nginx
-  minReadySeconds: 5 # Pod ready後等待5分鐘
+  minReadySeconds: 5 # Pod ready後等待5秒鐘
   strategy:
     type: RollingUpdate
     rollingUpdate:
