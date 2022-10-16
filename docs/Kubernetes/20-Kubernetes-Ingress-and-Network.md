@@ -1,6 +1,6 @@
 ---
 id: kubernetes-ingress-and-networks
-title: Kubernetes系列文 - Ingress抽象元件與Networks (四)
+title: Kubernetes系列文 - Ingress抽象元件與Networks介紹 (四)
 description: "聊聊Kubernetes Ingress抽象元件與Networks"
 slug: "ingress-and-networks"
 date: "2022-10-03T02:00:00.000+0800"
